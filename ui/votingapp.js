@@ -34,10 +34,24 @@ function getMyHandle()
     })
 }
 
+function makePlayerHTML(handle_object) {
+    return "<li data-id=\"" + handle_object.hash + "\"" +
+        "data-name=\"" + handle_object.handle + "\">" +
+        handle_object.handle +
+        "</li>";
+}
+
+function updateCandidates() {
+$("#candidates").empty();
+    for (var x = 0; x < Handles.length; x++) {
+        $("#candidates").append(makePlayerHTML(Handles[x]));
+    }
+  }
+
 function getHandles(callbackFn) {
-    send("getHandles", undefined, function (handles) {
-        //Handles = JSON.parse(json);
-        //updateCandidates();
+    send("getHandles", undefined, function (json) {
+        Handles = JSON.parse(json);
+        updateCandidates();
         console.log(handles);
         
     });
