@@ -110,6 +110,11 @@
                     "Exposure":"public"
                 },
                 {
+                    "Name": "getHandle",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
                     "Name": "getUserVoteChain",
                     "CallingType": "json",
                     "Exposure":"public"
