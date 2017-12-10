@@ -10,7 +10,9 @@
  * Called only when your source chain is generated
  * @return {boolean} success
  */
-function genesis() {
+function genesis() 
+{
+  setHandle(App.Agent.String); 
   // any genesis code here
   return true;
 }
@@ -187,6 +189,7 @@ function setHandle(handle)
 //Returns the handle of this node
 function getMyHandle()
 {
+  console.log("CAN I SEE THIS BEING CALLED?");
   var me = getMe();
   return getHandle(me);
 }

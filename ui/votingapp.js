@@ -28,8 +28,7 @@ VotingApp =
 
 function getMyHandle()
 {
-    send("getMyHandle", undefined, function(handle)
-    {
+    send("getMyHandle", undefined, function(handle) {
         console.log(handle);
     })
 }
