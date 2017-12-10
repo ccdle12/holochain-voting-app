@@ -34,6 +34,12 @@
                     "DataFormat": "json",
                     "Sharing": "public",
                     "SchemaFile": "handle.json"
+                },
+                { 
+                    "Name": "vote",
+                    "DataFormat": "links",
+                    "Sharing": "public",
+                    "SchemaFile": "vote.json"
                 }
             ],
             "RibosomeType": "js",
@@ -90,6 +96,21 @@
                 },
                 {
                     "Name": "getHandles",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getUser",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "voteFor",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getUserVoteChain",
                     "CallingType": "json",
                     "Exposure":"public"
                 }

@@ -181,12 +181,6 @@ function setHandle(handle)
   debug(anchorHash);
 
   return anchorHash;
-  // var key = commit("handle", handle);
-  // var me = getMe();
-
-  // debug(key);
-
-  // return key;
 }
 
 
@@ -217,4 +211,63 @@ function getHandles()
     handles.push({handle: rtn[i].index, hash: rtn[i].value});
   
   return handles;
+}
+
+function getUser(name)
+{
+  var rtn = getFromListAnchor("userDirectory");
+  var retrievedUser = -1;
+
+  for (var i = 0; i < rtn.length; i++)
+    if (rtn[i].index == name)
+    {
+      retrievedUser = rtn[i];
+      break;
+    }
+
+  debug("RETRIEVED USER");
+  debug(retrievedUser);
+
+  return retrievedUser;
+}
+
+//////////////////////////////////////////
+                                      ///
+//Functions that have not been tested //                                   
+                                    ///
+//////////////////////////////////////
+
+function voteFor(name)
+{
+  var votingForUser = getUser(name);
+  debug(votingForUser);
+  var votingForUserHash = votingForUser.value;
+  debug(votingForUserHash);
+  var me = getMe();
+
+  return commit("vote", {Links:[
+    {Base: votingForUserHash, Link:me, Tag:"vote"}
+  ]});
+}
+
+function getUserVoteChain(params)
+{
+  var type = params.type;
+  debug(type);
+
+  var user = getUser(params.from);
+  debug("SHOULD BE PRINTING USER OBJECT")
+  debug(user);
+
+  var base = user.value;
+  debug(base);
+
+  var result = {};
+
+  if (type == "vote")
+  {
+    result["result"] = getLinks(base, type);
+  }
+
+  return result;
 }

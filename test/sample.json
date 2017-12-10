@@ -86,6 +86,48 @@
             "Exposure": "public",
             "Raw": false,
             "Repeat": 0
+        },
+        {
+            "Convey": "This test will return the json object according to handle",
+            "Zome": "sampleZome",
+            "FnName": "getUser",
+            "Input": "chris",
+            "Output": {"index":"chris","value":"QmdAXtDQ8VJwd2Fg86267TX2RpSGR92HHLuYm1kCX5jKik"},
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return the hash of the latest entry in the sourcechain",
+            "Zome": "sampleZome",
+            "FnName": "voteFor",
+            "Input": "chris",
+            "Output": "%h%",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return the chain in the DHT according to the handle?",
+            "Zome": "sampleZome",
+            "FnName": "getUserVoteChain",
+            "Input": {"from":"chris", "type":"vote"},
+            "Output": "%h%",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
         }
     ],
     "Identity": "",
