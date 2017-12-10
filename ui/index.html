@@ -11,6 +11,32 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
 
         <title>Voting App</title>
+
+        
     </head>
-    <body>Your UI here!</body>
+    <body>
+   <div id="heading">
+      <h1>CHAIN-VOTE - decentralised voting applicaiton</h1>
+      <h2>A Holochain Sample Application.</h2>
+      <div id="handle_block">Your Handle: <a id="handle" href="#"></a></div>
+    </div>
+    <div  class="container">
+      <div class="row">
+        <div class="col-md-6 candidates">
+        <div class="panel panel-default">
+                <div class="panel-heading">Candidates</div>
+                <div class="panel-body">
+                    <ul id="candidates">
+                    </ul>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6" id="voteButton">
+          <button id="req-toss-button" type="button" class="btn btn-primary">Request Toss</button>  
+        </div>
+      </div>
+    </div>
+
+
+</body>
 </html>

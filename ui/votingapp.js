@@ -30,10 +30,21 @@ function getMyHandle()
 {
     send("getMyHandle", undefined, function(handle) {
         console.log(handle);
+        $("#handle").html(handle);
     })
+}
+
+function getHandles(callbackFn) {
+    send("getHandles", undefined, function (handles) {
+        //Handles = JSON.parse(json);
+        //updateCandidates();
+        console.log(handles);
+        
+    });
 }
 
 $(window).ready(function() 
 {
     getMyHandle();
+    setInterval(getHandles, 2000);
 })
