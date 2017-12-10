@@ -10,7 +10,7 @@ function send(fn,data,resultFn) {
     
     eval(VotingApp.getHook(fn, "preSendHook"));
     $.post(
-        "/fn/VotingApp/"+fn,
+        "/fn/sampleZome/"+fn,
         data,
         function(response) {
             if (VotingApp.debug) console.log("response: " + response);
