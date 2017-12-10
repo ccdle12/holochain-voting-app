@@ -1,0 +1,95 @@
+{
+    "Tests": [
+        {
+            "Convey": "This test will the App DNA Hash",
+            "Zome": "sampleZome",
+            "FnName": "getProperty",
+            "Input": "App_DNA_Hash",
+            "Output": "%dna%",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return the handle and hash",
+            "Zome": "sampleZome",
+            "FnName": "setHandle",
+            "Input": "chris",
+            "Output": "QmWQiWQBnKangTR4W1qKEayQckeH8b61oA6D6oFGWbt6Sm",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return content of the post",
+            "Zome": "sampleZome",
+            "FnName": "getEntryFromDHT",
+            "Input": "QmWQiWQBnKangTR4W1qKEayQckeH8b61oA6D6oFGWbt6Sm",
+            "Output": "chris",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return my handle",
+            "Zome": "sampleZome",
+            "FnName": "getMyHandle",
+            "Input": "",
+            "Output": "chris",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return my public key?",
+            "Zome": "sampleZome",
+            "FnName": "getMe",
+            "Input": {
+                "body": "this is the entry body",
+                "stamp": 12345
+            },
+            "Output": "%key%",
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        },
+        {
+            "Convey": "This test will return a list of handles",
+            "Zome": "sampleZome",
+            "FnName": "getHandles",
+            "Input": "",
+            "Output": [{"handle":"chris","hash":"QmdAXtDQ8VJwd2Fg86267TX2RpSGR92HHLuYm1kCX5jKik"}],
+            "Err": "",
+            "Regexp": "",
+            "Time": 0,
+            "Wait": 0,
+            "Exposure": "public",
+            "Raw": false,
+            "Repeat": 0
+        }
+    ],
+    "Identity": "",
+    "Fixtures": {
+        "Agents": null
+    }
+}

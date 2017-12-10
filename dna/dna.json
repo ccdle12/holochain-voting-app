@@ -1,0 +1,170 @@
+{
+    "Version": 1,
+    "UUID": "498ca596-dcfa-11e7-9c91-186590d166df",
+    "Name": "firstApp",
+    "Properties": {
+        "description": "provides an application template",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "Zomes": [
+        {
+            "Name": "sampleZome",
+            "Description": "provide a sample zome",
+            "CodeFile": "sampleZome.js",
+            "Entries": [
+                {
+                    "Name": "sampleEntry",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "sampleEntry.json",
+                    "Sharing": "public"
+                },
+                { 
+                    "Name": "post",
+                    "DataFormat": "json",
+                    "Sharing": "public",
+                    "SchemaFile": "post.json"
+                },
+                { 
+                    "Name": "handle",
+                    "DataFormat": "json",
+                    "Sharing": "public",
+                    "SchemaFile": "handle.json"
+                }
+            ],
+            "RibosomeType": "js",
+            "Functions": [
+                {
+                    "Name": "sampleEntryCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "sampleEntryRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "doSampleAction",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "getMe",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "getProperty",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "post",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "setHandle",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getMyHandle",
+                    "CallingType": "string",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getEntryFromDHT",
+                    "CallingType": "string",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getHashOfHandle",
+                    "CallingType": "string",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getHandles",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                }
+            ],
+            "BridgeFuncs": null,
+            "BridgeTo": ""
+        },
+        {
+            "Name": "anchors",
+            "Description": "Anchor zome",
+            "RibosomeType": "js",
+            "CodeFile": "anchors.js",
+            "Entries": [
+                {
+                    "Name": "anchor_base",
+                    "DataFormat": "string",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "anchor_link",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "_anchor_generic_",
+                    "DataFormat": "string",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "_anchor_json_type_for_testing_",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                }
+                ],
+                "Functions": [
+                {
+                    "Name": "set",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "get",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "addToList",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "getFromList",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "removeFromList",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                },
+                {
+                    "Name": "makeAnchorHash",
+                    "CallingType": "json",
+                    "Exposure":"public"
+                }
+            ]
+        }
+    ],
+    "RequiresVersion": 18,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    }
+}

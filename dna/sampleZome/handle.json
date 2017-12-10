@@ -1,0 +1,13 @@
+{
+	"title": "handle Schema",
+	"type": "object",
+	"properties": {
+		"handle": {
+			"type": "string"
+        },
+		"timestamp": {
+			"type": "integer"
+		}
+	},
+    "required": ["body", "timestamp"]
+}
